@@ -1,10 +1,10 @@
 :root {
-    --body-bg: #F5F3EE;
-    --primary-navy: #0F2942;
-    --accent-orange: #E66A3B;
-    --secondary-slate: #5C7286;
-    --success-green: #1A8250;
-    --pure-white: #FFFFFF;
+    --body-bg: #F5F3EE;       /* Your custom ivory background */
+    --primary-navy: #0F2942;  /* Brand / Headers / Main Text */
+    --accent-orange: #E66A3B; /* Call to Action buttons */
+    --secondary-slate: #5C7286;/* Secondary text / Icons / Borders */
+    --success-green: #1A8250; /* Available status / Confirmations */
+    --pure-white: #FFFFFF;    /* Content cards */
 }
 
 * {
@@ -36,6 +36,43 @@ header h1 {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+}
+
+ul.topnav {
+    position: fixed;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover {
+    background-color: #111;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 /* Container Layout */
