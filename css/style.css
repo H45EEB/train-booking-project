@@ -1,5 +1,5 @@
 :root {
-    --body-bg: #F5F3EE;       /* Your custom ivory background */
+    --body-bg: #FFF5EE;       /* Your custom ivory background */
     --primary-navy: #0F2942;  /* Brand / Headers / Main Text */
     --accent-orange: #E66A3B; /* Call to Action buttons */
     --secondary-slate: #5C7286;/* Secondary text / Icons / Borders */
@@ -21,35 +21,26 @@ body {
     padding-bottom: 60px;
 }
 
-/* Header Style */
-header {
-    background-color: var(--primary-navy);
-    color: var(--pure-white);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(15, 41, 66, 0.1);
-}
-
-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
 ul.topnav {
-    position: fixed;
-    width: 100%;
+
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: var(--primary-navy);
+    display: flex;
+    justify-content: right;
 }
 
-ul.topnav li {
-    float: left;
+ul.topnav li.active {
+    background-color: var(--accent-orange);
+    a {
+        color: var(--primary-navy);
+    }
+
+    :hover{
+        background-color: red;
+    }
 }
 
 ul.topnav li a {
@@ -61,14 +52,14 @@ ul.topnav li a {
 }
 
 ul.topnav li a:hover {
-    background-color: #111;
+    background-color: var(--secondary-slate);
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: var(--primary-navy);
     color: white;
     text-align: center;
     padding: 20px;
@@ -80,20 +71,66 @@ footer {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: lighter;
+        margin-top: -30px;
+    }
 }
 
-/* Card components using white to pop off the ivory background */
+.card-grid {
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Vertical spacing between pairs */
+}
+
+.card-pair {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Horizontal spacing between matching cards */
+}
+
 .card {
     background: var(--pure-white);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     box-shadow: 0 4px 12px rgba(15, 41, 66, 0.04);
-    margin-bottom: 2rem;
+    margin-bottom: 0; /* Removed this so the flex gap handles layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.card:hover {
+
+    .card-title {
+        color: var(--accent-orange);
+    }
+    background-color: var(--primary-navy);
+    transition-duration: 0.2s;
+    transition-property: background-color;
 }
 
 .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0; /* Resetting this to center vertically inside the card */
     color: var(--primary-navy);
 }
 
