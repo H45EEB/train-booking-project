@@ -1,12 +1,184 @@
+:root {
+    --body-bg: #F5F3EE;
+    --primary-navy: #0F2942;
+    --accent-orange: #E66A3B;
+    --secondary-slate: #5C7286;
+    --success-green: #1A8250;
+    --pure-white: #FFFFFF;
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--body-bg);
+    color: var(--primary-navy);
+    line-height: 1.6;
+    padding-bottom: 60px;
 }
 
-.nav-bar {
-    background-color: yellow;
+/* Header Style */
+header {
+    background-color: var(--primary-navy);
+    color: var(--pure-white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(15, 41, 66, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Container Layout */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Card components using white to pop off the ivory background */
+.card {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(15, 41, 66, 0.04);
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-navy);
+}
+
+/* Form Layout */
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary-slate);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, .form-group select {
+    padding: 0.75rem;
+    border: 1px solid #D1CCD2;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--primary-navy);
+    outline: none;
+    background-color: var(--pure-white);
+}
+
+.form-group input:focus {
+    border-color: var(--primary-navy);
+}
+
+/* Direct Action Button (Orange Accent) */
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: var(--pure-white);
+    border: none;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #D05B2F; /* Slightly deeper tint for hover */
+}
+
+/* Results / List Section */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--body-bg);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.time-location {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.time {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+}
+
+.station {
+    font-size: 0.9rem;
+    color: var(--secondary-slate);
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: var(--secondary-slate);
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* Status Badge (Green Success) */
+.status-badge {
+    background-color: rgba(26, 130, 80, 0.1);
+    color: var(--success-green);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.price-action {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+}
+
+.btn-sm {
+    width: auto;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
 }
