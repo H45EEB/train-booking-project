@@ -256,3 +256,88 @@ footer {
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
 }
+
+
+/*Booking page css*/
+
+.form-section {
+            max-width: 560px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .form-card {
+            background-color: #162032;
+            border-radius: 16px;
+            padding: 40px 36px;
+        }
+
+        .form-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 28px;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            background-color: #ffffff;
+            color: #162032;
+        }
+
+        
+
+        
+
+        .price-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 24px 0 20px;
+            text-align: center;
+        }
+
+        .price-box h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #162032;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #E8643A;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #cf5530;
+        }
