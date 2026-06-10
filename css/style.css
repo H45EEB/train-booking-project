@@ -307,11 +307,7 @@ footer {
             color: #162032;
         }
 
-        
-
-        
-
-        .price-box {
+       .price-box {
             background-color: #ffffff;
             border-radius: 10px;
             padding: 14px 18px;
@@ -340,4 +336,198 @@ footer {
 
         .submit-btn:hover {
             background-color: #cf5530;
+        }
+/*Home page*/
+
+        .hero {
+            background: url('https://muvsync.com/images/blog/Railway/nine-arch.png') center/cover no-repeat;
+            background-attachment: scroll;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: white;
+            position: relative;
+        }
+ 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+ 
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 50px;
+        }
+ 
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+ 
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+ 
+        .btn-hero:hover {
+            background-color: var(--accent-orange);
+            border-color: var(--accent-orange);
+        }
+ 
+        
+        .respon-section {
+            padding: 60px 0;
+            background-color: var(--pure-white);
+        }
+ 
+        .respon-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+ 
+        .respon-section p {
+            font-size: 1rem;
+            color: var(--secondary-slate);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+ 
+       
+       .gallery-section {
+            padding: 60px 0;
+            background-color: var(--body-bg);
+        }
+ 
+        .gallery-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+ 
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+ 
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(15, 41, 66, 0.1);
+        }
+ 
+ 
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+ 
+ 
+        .services-section {
+            padding: 60px 0;
+            background-color: var(--pure-white);
+        }
+ 
+        .services-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+ 
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+ 
+        .service-card {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1a3a52 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(15, 41, 66, 0.1);
+        }
+ 
+        .service-card:hover {
+            box-shadow: 0 8px 20px rgba(15, 41, 66, 0.2);
+        }
+ 
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+ 
+        .service-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+         .class-types {
+            font-size: 0.85rem;
+            color: #ddd;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+         @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+ 
+            .hero-content {
+                padding: 0 20px;
+            }
+ 
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+ 
+            .hero-content p {
+                font-size: 1rem;
+            }
+ 
+            ul.topnav {
+                flex-wrap: wrap;
+            }
+ 
+            ul.topnav li a {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+ 
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+ 
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+         }
+
+        footer a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+ 
+        footer a:hover {
+            text-decoration: underline;
         }
