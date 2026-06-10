@@ -256,6 +256,126 @@ footer {
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
 }
+/*About Page css*/
+.banner{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    min-height: 200px;
+    background-image: linear-gradient(90deg,rgba(0,42,92,0.85) 0%,rgba(0,42,92,0.3) 60%),url(shutterstock_663809206-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+.banner-content{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 0 40px;
+    color: white;
+    z-index: 2;
+}  
+ 
+.banner-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: black;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.banner-content p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 600px;
+}
+
+.mission-vision{
+    display: flex;
+    gap: 25px;
+    padding: 50px;
+    justify-content: center;
+    
+    
+}
+.sion{
+    width: 250px;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,1);
+    text-align: center;
+    
+}
+.sion h2{
+    text-align: center;
+}
+
+.about-project{
+    text-align: center;
+    padding: 5px;
+}
+.about{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.about img{
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.about p{
+    width: 70%;
+}
+
+.technology{
+    text-align: center;
+    padding: 10px;
+}
+
+.tech-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+
+}
+.tech-box{
+    padding: 20px;
+    background: #0F2942;
+    color: rgb(253, 252, 252);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,1);
+}
+
+.team{
+    text-align: center;
+    padding: 10px;
+   
+}
+.team-members{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+  
+}
+.member{
+    width: 250px;
+    text-align: center;
+}
+.member img{
+    width:100px;
+    height:150px;
+    border-radius: 40%;
+}
 
 
 /*Booking page css*/
@@ -531,3 +651,5 @@ footer {
         footer a:hover {
             text-decoration: underline;
         }
+
+
