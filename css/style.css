@@ -556,49 +556,6 @@ footer {
             display: block;
         }
  
- 
-        .services-section {
-            padding: 60px 0;
-            background-color: var(--pure-white);
-        }
- 
-        .services-section h2 {
-            font-size: 2.5rem;
-            color: var(--primary-navy);
-            margin-bottom: 40px;
-            text-align: center;
-        }
- 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
- 
-        .service-card {
-            background: linear-gradient(135deg, var(--primary-navy) 0%, #1a3a52 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(15, 41, 66, 0.1);
-        }
- 
-        .service-card:hover {
-            box-shadow: 0 8px 20px rgba(15, 41, 66, 0.2);
-        }
- 
-        .service-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            color: var(--accent-orange);
-            font-weight: bold;
-        }
- 
-        .service-card p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
 
          .class-types {
             font-size: 0.85rem;
