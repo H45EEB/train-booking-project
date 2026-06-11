@@ -603,6 +603,14 @@ footer {
         footer a {
             color: var(--accent-orange);
             text-decoration: none;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
         }
  
         footer a:hover {
