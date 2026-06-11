@@ -505,7 +505,7 @@ footer {
         
         .respon-section {
             padding: 60px 0;
-            background-color: var(--pure-white);
+            background-color:var(--body-bg);
         }
  
         .respon-section h2 {
