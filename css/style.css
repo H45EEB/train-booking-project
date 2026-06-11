@@ -538,7 +538,7 @@ footer {
  
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
  
@@ -569,6 +569,8 @@ footer {
             header {
                 padding: 15px 20px;
             }
+
+            
  
             .hero-content {
                 padding: 0 20px;
@@ -612,6 +614,18 @@ footer {
             padding: 20px;
             margin-top: 40px;
         }
+
+        @media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
  
         
 
