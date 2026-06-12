@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+
+        <style>
+            body{
+                margin:0;
+                font-family:Arial;
+                background-color:#f2f2f2;
+            }
+
+            .navbar{
+                background-color: #0F2942;
+                color: white;
+                padding: 20px;
+                font-size: 150%;
+                text-align: center;
+            }
+
+            .navbar h1{
+                display:inline;
+            }
+
+            .menu{
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .menu a{
+                color: white;
+                text-decoration: none;
+                margin-left: 20px;
+            }
+
+            .hero{
+                background-image: url("img/train5.jpg");
+                background-size: cover;
+                background-position: center;
+                height: 350px;
+                color: white;
+                padding: 80px;
+            }
+
+            .hero h1{
+                font-size: 60px;
+            }
+
+            .hero p{
+                font-size: 24px;
+                width: 93%;
+            }
+
+            .container{
+                width: 90%;
+                margin: auto;
+                margin-top: 30px;
+            }
+
+            .main-section{
+                display: flex;
+                gap: 20px;
+            }
+
+            .left-side{
+                width: 40%;
+            }
+
+            .right-side{
+                width: 60%;
+            }
+
+            .box{
+                background: white;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                font-size: 110%;
+            }
+
+            .box:hover{
+                box-shadow: 0px 0px 10px gray;
+            }
+
+            h3{
+                color: #002b72;
+            }
+
+            h2{
+                color: #002b72;
+            }
+
+            input, textarea{
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            button{
+                background: #002b72;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background: #001b45;
+            }
+
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            table, th, td{
+                border: 1px solid gray;
+            }
+
+            th, td{
+                padding: 10px;
+                text-align: center;
+            }
+
+            th{
+                background: #002b72;
+                color: white;
+            }
+
+            .faq{
+                display:flex;
+                justify-content:center;
+                text-align:center;
+                gap: 20px;
+            }
+
+            .fax-box{
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                width: 33%;
+                text-align:center;
+            }
+            
+            footer{
+                background:#0F2942;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 20px;
+                font-size: 175%;
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+        <div class="navbar">
+
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Journey</a>
+                <a href="#">Booking</a>
+                <a href="#">Contact us</a>
+                <a href="#">Help</a>
+            </div>
+
+        </div>
+
+        <div class="hero">
+            <h1>Contact Us</h1>
+
+            <p>We are here to help you with train bookings,<br>
+                cancellations,schedules,payments and any<br>
+                travel-related questions.
+            </p>
+
+        </div>
+
+        <div class="container">
+            <div class="main-section">
+                <div class="left-side">
+                    <div class="box">
+                <h2>Office Address</h2>
+                <p>
+                    Sri lanka Railways,<br><br>
+                    123 Railway Avenue,<br><br>
+                    Colombo 10,<br><br>
+                    Sri Lanka
+                </p>
+
+            </div>
+
+            <div class="box">
+                <h2>Contact Information</h2>
+                <p>Phone : +94 11 234 5678</p>
+                <p>Mobile : +94 77 123 4567</p>
+                <p>Email : support@railways.com</p>
+            </div>
+
+            <div class="box">
+                <h2>Customer Support Hours</h2>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>8.00 AM - 8.00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>9.00 AM - 5.00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+
+            </div>
+            </div>
+
+            <div class="right-side">
+
+            <div class="box">
+                <h2>Send Us a Message</h2><br><br>
+
+                <form id="contractForm">
+
+                    <lable>Full Name</lable>
+                    <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+                    <lable>Email Address</lable>
+                    <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+                    <lable>Subject</lable>
+                    <input type="text" id="subject" placeholder="Enter subject"><br><br>
+
+                    <lable>Message</lable>
+                    <textarea id="message" placeholder="Type your message"></textarea><br><br>
+
+                    <button type="submit">Send Message</button><br><br>
+                </form>
+            </div>
+            </div>
+            </div>
+            
+            <div class="box">
+                <h2 style="text-align:center;">Frequently Asked Questions</h2>
+
+                <div class="faq">
+                        
+                    <div class="faq-box">
+                        <h3>How can I cancel my booking?</h3>
+                        <p>
+                            You can cancel your booking from the
+                            Booking page.
+                        </p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h3>How do I get my e-ticket?</h3>
+                        <p>
+                            Your e-ticket will be sent to your email
+                            after payment.
+                        </p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h3>Can I change my travel date?</h3>
+                        <p>
+                            Yes, you can change the date if seats are
+                            available.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 RailExpress Booking System. All rights reserved.</p>
+        </footer>
+
+        <script>
+            let form = document.getElementById("contactForm");
+            form.addEventListener("submit", function(event)){
+                event.preventDefault();
+
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let subject = document.getElementById("subject").value;
+                let message = document.getElementById("message").value;
+
+                if(name == "" || email == "" || subject == "" || message == ""){
+                    alert("Please fill all fields");
+                }
+                else{
+                    alert("Message Sent Successfully");
+                    form.reset();
+                }
+            }
+        </script>
+    </body>
+</html>
