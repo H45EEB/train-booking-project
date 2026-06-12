@@ -1,309 +1,358 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Contact Page</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
 
-        <style>
-            body{
-                margin:0;
-                font-family:Arial;
-                background-color:#f2f2f2;
-            }
+    <style>
+        /* ── Contact page – scoped styles only, no overrides of style.css globals ── */
 
-            .navbar{
-                background-color: #0F2942;
-                color: white;
-                padding: 20px;
-                font-size: 150%;
-                text-align: center;
-            }
+        /* Hero / Banner */
+        .contact-banner {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            min-height: 200px;
+            background-image: linear-gradient(90deg, rgba(15,41,66,0.85) 0%, rgba(15,41,66,0.3) 60%),
+                              url("img/train5.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+        }
 
-            .navbar h1{
-                display:inline;
-            }
+        .contact-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            color: var(--pure-white);
+            z-index: 2;
+        }
 
-            .menu{
-                text-align: right;
-                margin-top: 10px;
-            }
+        .contact-banner-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
 
-            .menu a{
-                color: white;
-                text-decoration: none;
-                margin-left: 20px;
-            }
+        .contact-banner-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-style: italic;
+            max-width: 600px;
+        }
 
-            .hero{
-                background-image: url("img/train5.jpg");
-                background-size: cover;
-                background-position: center;
-                height: 350px;
-                color: white;
-                padding: 80px;
-            }
+        /* Page body wrapper */
+        .contact-wrapper {
+            width: 90%;
+            max-width: 1100px;
+            margin: 2rem auto 80px;
+        }
 
-            .hero h1{
-                font-size: 60px;
-            }
+        /* Two-column layout */
+        .contact-columns {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
 
-            .hero p{
-                font-size: 24px;
-                width: 93%;
-            }
+        .contact-left  { width: 40%; display: flex; flex-direction: column; gap: 20px; }
+        .contact-right { width: 60%; }
 
-            .container{
-                width: 90%;
-                margin: auto;
-                margin-top: 30px;
-            }
+        /* Info / Form cards */
+        .contact-card {
+            background: var(--pure-white);
+            border-radius: 12px;
+            padding: 24px 28px;
+            box-shadow: 0 4px 12px rgba(15, 41, 66, 0.06);
+            transition: box-shadow 0.2s ease;
+        }
 
-            .main-section{
-                display: flex;
-                gap: 20px;
-            }
+        .contact-card:hover {
+            box-shadow: 0 6px 20px rgba(15, 41, 66, 0.14);
+        }
 
-            .left-side{
-                width: 40%;
-            }
+        .contact-card h2 {
+            color: var(--primary-navy);
+            font-size: 1.25rem;
+            margin-bottom: 14px;
+        }
 
-            .right-side{
-                width: 60%;
-            }
+        .contact-card p {
+            color: var(--secondary-slate);
+            line-height: 1.8;
+        }
 
-            .box{
-                background: white;
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius: 10px;
-                font-size: 110%;
-            }
+        /* Support hours table */
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
 
-            .box:hover{
-                box-shadow: 0px 0px 10px gray;
-            }
+        .hours-table th,
+        .hours-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
 
-            h3{
-                color: #002b72;
-            }
+        .hours-table th {
+            background-color: var(--primary-navy);
+            color: var(--pure-white);
+        }
 
-            h2{
-                color: #002b72;
-            }
+        .hours-table tr:nth-child(even) td {
+            background-color: var(--body-bg);
+        }
 
-            input, textarea{
-                width: 100%;
-                padding: 10px;
-                margin-top: 10px;
-                margin-bottom: 15px;
-            }
+        /* Contact form fields */
+        .contact-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
 
-            button{
-                background: #002b72;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                cursor: pointer;
-            }
+        .contact-form-group label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--secondary-slate);
+        }
 
-            button:hover{
-                background: #001b45;
-            }
+        .contact-form-group input,
+        .contact-form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #D1CCD2;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: var(--primary-navy);
+            background-color: var(--pure-white);
+            outline: none;
+            font-family: inherit;
+        }
 
-            table{
-                width: 100%;
-                border-collapse: collapse;
-            }
+        .contact-form-group input:focus,
+        .contact-form-group textarea:focus {
+            border-color: var(--primary-navy);
+        }
 
-            table, th, td{
-                border: 1px solid gray;
-            }
+        .contact-form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
 
-            th, td{
-                padding: 10px;
-                text-align: center;
-            }
+        /* FAQ section */
+        .faq-section {
+            margin-top: 0;
+        }
 
-            th{
-                background: #002b72;
-                color: white;
-            }
+        .faq-section h2 {
+            color: var(--primary-navy);
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-            .faq{
-                display:flex;
-                justify-content:center;
-                text-align:center;
-                gap: 20px;
-            }
+        .faq-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
 
-            .fax-box{
-                background: white;
-                padding: 20px;
-                border-radius: 10px;
-                width: 33%;
-                text-align:center;
-            }
-            
-            footer{
-                background:#0F2942;
-                color: white;
-                text-align: center;
-                padding: 20px;
-                margin-top: 20px;
-                font-size: 175%;
-            }
+        .faq-item {
+            background: var(--pure-white);
+            border-radius: 12px;
+            padding: 20px 24px;
+            width: 33%;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(15, 41, 66, 0.06);
+            transition: box-shadow 0.2s ease;
+        }
 
-        </style>
+        .faq-item:hover {
+            box-shadow: 0 6px 20px rgba(15, 41, 66, 0.14);
+        }
 
-    </head>
-    
-    <body>
-        <div class="navbar">
+        .faq-item h3 {
+            color: var(--primary-navy);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
 
-            <div class="menu">
-                <a href="#">Home</a>
-                <a href="#">Journey</a>
-                <a href="#">Booking</a>
-                <a href="#">Contact us</a>
-                <a href="#">Help</a>
-            </div>
+        .faq-item p {
+            color: var(--secondary-slate);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
 
-        </div>
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-columns { flex-direction: column; }
+            .contact-left,
+            .contact-right  { width: 100%; }
+            .faq-grid        { flex-direction: column; align-items: center; }
+            .faq-item        { width: 100%; }
+        }
+    </style>
+</head>
+<body>
 
-        <div class="hero">
+    <!-- ── Navbar (matches about.html structure exactly) ── -->
+    <ul class="topnav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="active"><a href="contact.html">Contact Us</a></li>
+        <li><a href="help.html">Help</a></li>
+    </ul>
+
+    <!-- ── Banner ── -->
+    <section class="contact-banner">
+        <div class="contact-banner-content">
             <h1>Contact Us</h1>
-
-            <p>We are here to help you with train bookings,<br>
-                cancellations,schedules,payments and any<br>
-                travel-related questions.
-            </p>
-
+            <p>We are here to help you with train bookings, cancellations, schedules, payments and any travel-related questions.</p>
         </div>
+    </section>
 
-        <div class="container">
-            <div class="main-section">
-                <div class="left-side">
-                    <div class="box">
-                <h2>Office Address</h2>
-                <p>
-                    Sri lanka Railways,<br><br>
-                    123 Railway Avenue,<br><br>
-                    Colombo 10,<br><br>
-                    Sri Lanka
-                </p>
+    <!-- ── Main content ── -->
+    <div class="contact-wrapper">
 
-            </div>
+        <!-- Two-column section -->
+        <div class="contact-columns">
 
-            <div class="box">
-                <h2>Contact Information</h2>
-                <p>Phone : +94 11 234 5678</p>
-                <p>Mobile : +94 77 123 4567</p>
-                <p>Email : support@railways.com</p>
-            </div>
+            <!-- Left: info cards -->
+            <div class="contact-left">
 
-            <div class="box">
-                <h2>Customer Support Hours</h2>
-                <table>
-                    <tr>
-                        <th>Day</th>
-                        <th>Time</th>
-                    </tr>
-                    <tr>
-                        <td>Monday - Friday</td>
-                        <td>8.00 AM - 8.00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>9.00 AM - 5.00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Closed</td>
-                    </tr>
-                </table>
+                <div class="contact-card">
+                    <h2>Office Address</h2>
+                    <p>
+                        Sri Lanka Railways,<br>
+                        123 Railway Avenue,<br>
+                        Colombo 10,<br>
+                        Sri Lanka
+                    </p>
+                </div>
 
-            </div>
-            </div>
+                <div class="contact-card">
+                    <h2>Contact Information</h2>
+                    <p>Phone &nbsp;: +94 11 234 5678</p>
+                    <p>Mobile : +94 77 123 4567</p>
+                    <p>Email &nbsp;: support@railways.com</p>
+                </div>
 
-            <div class="right-side">
+                <div class="contact-card">
+                    <h2>Customer Support Hours</h2>
+                    <table class="hours-table">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monday – Friday</td>
+                                <td>8:00 AM – 8:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>9:00 AM – 5:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <div class="box">
-                <h2>Send Us a Message</h2><br><br>
+            </div><!-- /contact-left -->
 
-                <form id="contractForm">
+            <!-- Right: contact form -->
+            <div class="contact-right">
+                <div class="contact-card" style="height: 100%;">
+                    <h2>Send Us a Message</h2>
 
-                    <lable>Full Name</lable>
-                    <input type="text" id="name" placeholder="Enter your name"><br><br>
+                    <form id="contactForm">
+                        <div class="contact-form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                        </div>
 
-                    <lable>Email Address</lable>
-                    <input type="email" id="email" placeholder="Enter your email"><br><br>
+                        <div class="contact-form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
 
-                    <lable>Subject</lable>
-                    <input type="text" id="subject" placeholder="Enter subject"><br><br>
+                        <div class="contact-form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter subject">
+                        </div>
 
-                    <lable>Message</lable>
-                    <textarea id="message" placeholder="Type your message"></textarea><br><br>
+                        <div class="contact-form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Type your message"></textarea>
+                        </div>
 
-                    <button type="submit">Send Message</button><br><br>
-                </form>
-            </div>
-            </div>
-            </div>
-            
-            <div class="box">
-                <h2 style="text-align:center;">Frequently Asked Questions</h2>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div><!-- /contact-right -->
 
-                <div class="faq">
-                        
-                    <div class="faq-box">
-                        <h3>How can I cancel my booking?</h3>
-                        <p>
-                            You can cancel your booking from the
-                            Booking page.
-                        </p>
-                    </div>
+        </div><!-- /contact-columns -->
 
-                    <div class="faq-box">
-                        <h3>How do I get my e-ticket?</h3>
-                        <p>
-                            Your e-ticket will be sent to your email
-                            after payment.
-                        </p>
-                    </div>
-
-                    <div class="faq-box">
-                        <h3>Can I change my travel date?</h3>
-                        <p>
-                            Yes, you can change the date if seats are
-                            available.
-                        </p>
-                    </div>
-                    
+        <!-- FAQ row -->
+        <div class="contact-card faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How can I cancel my booking?</h3>
+                    <p>You can cancel your booking directly from the Booking page.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I get my e-ticket?</h3>
+                    <p>Your e-ticket will be sent to your email address after payment is confirmed.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I change my travel date?</h3>
+                    <p>Yes, you can change the date if seats are still available on your chosen route.</p>
                 </div>
             </div>
         </div>
 
-        <footer>
-            <p>© 2024 RailExpress Booking System. All rights reserved.</p>
-        </footer>
+    </div><!-- /contact-wrapper -->
 
-        <script>
-            let form = document.getElementById("contactForm");
-            form.addEventListener("submit", function(event)){
-                event.preventDefault();
+    <footer>
+        <p>&copy; 2026 RailExpress Booking System. All rights reserved.</p>
+    </footer>
 
-                let name = document.getElementById("name").value;
-                let email = document.getElementById("email").value;
-                let subject = document.getElementById("subject").value;
-                let message = document.getElementById("message").value;
+    <script>
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-                if(name == "" || email == "" || subject == "" || message == ""){
-                    alert("Please fill all fields");
-                }
-                else{
-                    alert("Message Sent Successfully");
-                    form.reset();
-                }
+            const name    = document.getElementById("name").value.trim();
+            const email   = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !subject || !message) {
+                alert("Please fill in all fields.");
+            } else {
+                alert("Message sent successfully!");
+                form.reset();
             }
-        </script>
-    </body>
+        });
+    </script>
+
+</body>
 </html>
