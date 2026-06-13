@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RailExpress - Train Schedules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body" class="bg-hero-train">
+
+<ul class="topnav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="journey.html">Journey Overview</a></li>
+    <li class="active"><a href="schedule.html">Schedules</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+<div class="page-intro">
+    <h1>Train Schedules</h1>
+    <h2>Find active routes and times</h2>
+
+    <div class="sched-wrap" style="width: 100%; margin-top: 2rem; max-width: 1200px; padding: 0 1.5rem;">
+
+        <div class="filter-bar" style="background-color: var(--white_colour); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(15, 41, 66, 0.04); margin-bottom: 2rem; width: 100%;">
+            <div class="search-grid">
+                <div class="field-group">
+                    <label for="origin-select">Origin Station</label>
+                    <select id="origin-select"><option value="ALL">All Origins</option></select>
+                </div>
+                <div class="field-group">
+                    <label for="dest-select">Destination Station</label>
+                    <select id="dest-select"><option value="ALL">All Destinations</option></select>
+                </div>
+                <button id="reset-filters-btn" class="btn-primary" style="padding: 0.6rem 1.2rem; cursor: pointer;">Clear Filters</button>
+            </div>
+        </div>
+
+        <div class="table-card" style="background-color: var(--white_colour); border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 4px 12px rgba(15, 41, 66, 0.04); width: 100%; overflow-x: auto; margin-bottom: 50px;">
+            <table class="sched-table" id="schedule-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                <tr style="background-color: var(--blue_colour); color: white;">
+                    <th style="padding: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Origin</th>
+                    <th style="padding: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Destination</th>
+                    <th style="padding: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Date</th>
+                    <th style="padding: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Departure Time</th>
+                    <th style="padding: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="5" class="no-records" style="text-align: center; padding: 2rem; color: var(--grey_colour); font-style: italic;">Loading schedules...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 RailExpress Booking System. All rights reserved.</p>
+</footer>
+
+<script src="js/jq.js"></script>
+<script src="js/descriptions.js"></script>
+<script src="js/schedule.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

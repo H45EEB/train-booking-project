@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RailExpress - Journey Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/descriptions.js"></script>
+    <script src="js/jq.js"></script>
+</head>
+<body id="body" class="bg-hero-train">
+
+<ul class="topnav">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="journey.html">Journey Overview</a></li>
+    <li><a href="schedule.html">Schedules</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+<div class="page-intro">
+    <h1>Welcome!</h1>
+    <h2>Select a journey card to see details</h2>
+</div>
+
+<div class="card-grid">
+    <div class="card-pair">
+        <div class="card" data-from="0" data-to="1"><p class="card-title">Colombo - Kandy</p></div>
+        <div class="card" data-from="1" data-to="0"><p class="card-title">Kandy - Colombo</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="0" data-to="2"><p class="card-title">Colombo - Jaffna</p></div>
+        <div class="card" data-from="2" data-to="0"><p class="card-title">Jaffna - Colombo</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="0" data-to="3"><p class="card-title">Colombo - Galle</p></div>
+        <div class="card" data-from="3" data-to="0"><p class="card-title">Galle - Colombo</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="0" data-to="4"><p class="card-title">Colombo - Trincomalee</p></div>
+        <div class="card" data-from="4" data-to="0"><p class="card-title">Trincomalee - Colombo</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="1" data-to="2"><p class="card-title">Kandy - Jaffna</p></div>
+        <div class="card" data-from="2" data-to="1"><p class="card-title">Jaffna - Kandy</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="1" data-to="3"><p class="card-title">Kandy - Galle</p></div>
+        <div class="card" data-from="3" data-to="1"><p class="card-title">Galle - Kandy</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="1" data-to="4"><p class="card-title">Kandy - Trincomalee</p></div>
+        <div class="card" data-from="4" data-to="1"><p class="card-title">Trincomalee - Kandy</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="2" data-to="3"><p class="card-title">Jaffna - Galle</p></div>
+        <div class="card" data-from="3" data-to="2"><p class="card-title">Galle - Jaffna</p></div>
+    </div>
+    <div class="card-pair">
+        <div class="card" data-from="2" data-to="4"><p class="card-title">Jaffna - Trincomalee</p></div>
+        <div class="card" data-from="4" data-to="2"><p class="card-title">Trincomalee - Jaffna</p></div>
+    </div>
+</div>
+
+<div id="journey-card" class="journey-card hidden card-flex-container">
+    <div class="card-content-wrapper">
+        <div class="card-header-row">
+            <div class="station-left"><h3 class="card-title text-xl">From: <span id="route-origin"></span></h3></div>
+            <div class="station-right"><h3 class="card-title text-xl">To: <span id="route-destination">Kandy</span></h3></div>
+        </div>
+        <div class="station-imgs">
+            <div class="img-wrap border-right"><img id="from-station-image" src="images/CMB.jpg" alt="From station" class="station-image" /></div>
+            <div class="img-wrap"><img id="to-station-image" src="images/KDY.jpg" alt="To station" class="station-image" /></div>
+        </div>
+        <p id="route-direction" class="station text-bold">West Coast to Central Highlands (Climbing)</p>
+        <div>
+            <p id="route-vibe" class="station text-italic margin-bottom-sm">"The quintessential Sri Lankan hill climb transition."</p>
+            <p id="route-description" class="station route-desc">You start at sea level in the humid, bustling Fort Station. For the first hour, it's a standard commuter ride through Colombo's suburbs. The magic happens after Rambukkana, where the train begins its heavy, chugging climb into the mountains.</p>
+        </div>
+        <div class="highlights-row">
+            <div class="flex-fill">
+                <span class="field-group"><label class="label-sm">Key Highlights</label></span>
+                <p id="route-highlights" class="station highlights-text">As the train snakes upward, the ground drops away to reveal the spectacular Kadugannawa Pass. You'll peer down into sheer vertical drops, deep green valleys, and get a perfect view of Bible Rock jutting out of the mist. The air turns noticeably cooler and crisper by the minute.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer-action">
+        <button id="btn-select-route" class="btn-primary btn-footer-override">View schedule</button>
+    </div>
+</div>
+
+<div id="black-screen" class="black-screen hidden"></div>
+
+<footer>
+    <p>&copy; 2026 RailExpress Booking System. All rights reserved.</p>
+</footer>
+
+<script src="js/schedule.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
